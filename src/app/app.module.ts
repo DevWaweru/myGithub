@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { GithubUsersComponent } from './github-users/github-users.component';
 import { GitReposComponent } from './git-repos/git-repos.component';
 import { SearchComponent } from './search/search.component';
+//Routing module
+import { RoutingModule } from './routing/routing.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -13,10 +16,12 @@ import { SearchComponent } from './search/search.component';
     AppComponent,
     GithubUsersComponent,
     GitReposComponent,
-    SearchComponent
+    SearchComponent,
+    NotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
