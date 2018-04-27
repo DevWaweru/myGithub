@@ -1,0 +1,51 @@
+#navMain {
+  font-family: 'Caveat';
+  font-size: 100%;
+  text-transform: uppercase;
+}
+
+#navMain .navbar-toggler {
+  font-size: 14px;
+  padding: 11px;
+  color: rgba(255, 255, 255, 0.973);
+}
+
+#navMain a {
+  color: rgba(250, 250, 250, 0.973);
+  text-decoration: none;
+}
+
+#navMain .navbar-nav .nav-item:active,
+#navMain .navbar-nav .nav-item:focus {
+  outline: none;
+  background-color: #222;
+}
+
+@media (min-width: 992px) {
+  #navMain {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s;
+    -moz-transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s;
+    transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s;
+    letter-spacing: 1px;
+    background: #222;
+    font-size: 1.5em;
+  }
+  #navMain .nav-link.active {
+    outline: none;
+    background-color: rgba(26, 25, 24, 0.699);
+  }
+  #navMain .nav-link.active:hover {
+    color: white;
+  }
+  #navMain.navbar-shrink {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid red;
+    background: rgba(128, 128, 128, 0.26);
+  }
+  #navMain.navbar-shrink a {
+    color: rgba(250, 0, 42, 0.973);
+  }
+}
