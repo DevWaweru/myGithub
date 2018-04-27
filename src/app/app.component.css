@@ -2,6 +2,7 @@
   font-family: 'Caveat';
   font-size: 100%;
   text-transform: uppercase;
+  background:black;
 }
 
 #navMain .navbar-toggler {
@@ -17,8 +18,8 @@
 
 #navMain .navbar-nav .nav-item:active,
 #navMain .navbar-nav .nav-item:focus {
-  outline: none;
-  background-color: #222;
+  outline: red;
+  background-color:black;
 }
 
 @media (min-width: 992px) {
@@ -29,7 +30,7 @@
     -moz-transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s;
     transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s;
     letter-spacing: 1px;
-    background: #222;
+    background: black;
     font-size: 1.5em;
   }
   #navMain .nav-link.active {
