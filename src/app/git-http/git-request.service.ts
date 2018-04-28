@@ -78,11 +78,12 @@ export class GitRequestService {
       items:any;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>("https://api.github.com/search/repositories?q="+searchName+"&per_page="+toShow+"&order=created&sort=asc?access_token=2e74c4eee677727babc2c9cc3360499d0b7ec391").toPromise().then(getRepoResponse=>{
+      this.http.get<ApiResponse>("https://api.github.com/search/repositories?q="+searchName+"&per_page="+toShow+"&sort=created&order=asc?access_token=2e74c4eee677727babc2c9cc3360499d0b7ec391").toPromise().then(getRepoResponse=>{
         this.searchRepo = getRepoResponse.items;
         console.log(getRepoResponse.items)
         resolve();
       },error=>{
+        this.searchRepo = "Type above to make a search request"
         console.log("Loading has Failed. Try Again later");
         reject(error);
       })

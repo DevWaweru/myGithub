@@ -2,8 +2,8 @@
   <ng-progress></ng-progress>
   <div class="row search">
     <div class="col-md-12">
-        <app-search (getName)='searchUser($event)'></app-search>
-      </div>
+      <app-search (getName)='searchUser($event)'></app-search>
+    </div>
   </div>
   <div class="row main-content">
     <div class="col-md-4 image-left">
@@ -12,7 +12,7 @@
     <div class="col-md-8 user-details">
       <div class="table table-striped">
         <h3> {{users.name}}</h3>
-        <table class="table">
+        <table class="table info-bio">
           <tbody>
             <tr>
               <th scope="row">Number of Repos:</th>
@@ -43,8 +43,23 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-md-12" *ngFor='let repository of gitUserRepos.newRepo' >
-      <h3> <a href="{{repository.html_url}}">{{repository.name}}</a> </h3>
+    <div class="col-md-12 user-repos">
+      <h3>Repositories from {{users.name}} </h3>
+      <div class="table table-striped">
+        <table class="table info-repos">
+          <tbody>
+            <tr *ngFor='let repository of gitUserRepos.newRepo'>
+              <td>
+                <a href="{{repository.html_url}}" target="_blank">{{repository.name}}</a>
+                <br>
+                <p>Description: {{repository.description}}</p>
+                <br>
+                <p>Date Created: {{repository.created_at}}</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

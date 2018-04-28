@@ -1,36 +1,58 @@
-.container{
-    margin-top: 2rem;
+.container {
+  margin-top: 2rem;
 }
-.col-md-12{
-    text-align: center;
+
+.col-md-12 {
+  text-align: center;
 }
-img{
-    max-width: 70%;
-    border-radius: 610px;
+
+img {
+  max-width: 70%;
+  border-radius: 610px;
 }
-.image-left{
-    padding-top: 4rem;
-    text-align: center;
+
+.image-left {
+  padding-top: 4rem;
+  text-align: center;
 }
-.content{
-    text-indent: 5%;
+
+.content {
+  text-indent: 5%;
 }
-p{
-    text-indent: 2rem;
+
+p {
+  text-indent: 2rem;
 }
-h3{
-    font-family: 'Julius Sans One';
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
+
+.table-striped h3 {
+  font-family: 'Allura';
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
 }
-tr{
-    font-family: 'Quicksand';
-    font-size: 16px;
+
+tr {
+  font-family: 'Quicksand';
+  font-size: 16px;
 }
-.user-details{
-    padding-top: 1rem;
+
+.user-details {
+  padding-top: 1rem;
 }
-.main-content{
-    padding-bottom: 5rem;
+
+.main-content {
+  padding-bottom: 5rem;
+}
+
+.info-repos {
+  text-align: left;
+}
+.user-repos h3{
+    font-family: 'Julius Sans One'
+}
+a:hover{
+    text-decoration: none;
+}
+td a{
+    font-size: 25px;
 }

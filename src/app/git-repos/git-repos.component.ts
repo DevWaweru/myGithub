@@ -36,6 +36,7 @@ export class GitReposComponent implements OnInit {
   constructor(private gitRepoRequest:GitRequestService) { }
 
   ngOnInit() {
+    this.resultCount = 1;
     this.gitRepoRequest.gitRepos(this.newName,this.resultCount);
     console.log(this.gitRepoRequest);
   }

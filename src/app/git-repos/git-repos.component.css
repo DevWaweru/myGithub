@@ -1,3 +1,20 @@
-.container{
-    margin-top: 2rem;
+.container {
+  margin-top: 2rem;
+}
+
+table {
+  font-family: 'Montserrat';
+}
+
+p {
+  text-indent: 2rem;
+  ;
+}
+
+button {
+  height: 100px;
+  border-radius: 100px;
+}
+.submit-button{
+    text-align: center;
 }
