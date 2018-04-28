@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GitRequestService } from '../git-http/git-request.service';
 import { Users } from '../git-class/users';
+import { Repos } from '../git-class/repos';
 
 @Component({
   selector: 'app-github-users',
@@ -12,6 +13,7 @@ export class GithubUsersComponent implements OnInit {
   public nameToSearch = 'devwaweru';
   public newName;
   users:Users;
+  repo=[]
 
   searchUser(name){
     this.newName='';
@@ -30,12 +32,18 @@ export class GithubUsersComponent implements OnInit {
     this.ngOnInit();
   }
 
-  constructor(private gitUserRequests:GitRequestService) { }
+  constructor(private gitUserRequests:GitRequestService,private gitUserRepos:GitRequestService) { }
 
   ngOnInit() {
     this.gitUserRequests.gitUser(this.nameToSearch);
-    // console.log(this.gitUserRequests.users);
+    // console.log(this.gitUserRequests)
     this.users=this.gitUserRequests.users;
+    this.gitUserRepos.getUserRepos(this.nameToSearch);
+    console.log(this.gitUserRepos);
+    // this.repo.push(this.gitUserRepos.repos);
+    
+    // console.log(this.gitUserRepos)
+    // console.log(this.repo);
     // this.users.created_at = new Date(this.users.created_at);
     // console.log(this.users);
   }
