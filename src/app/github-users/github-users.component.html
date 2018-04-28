@@ -1,33 +1,36 @@
 <div class="container">
-  <div class="row">
+  <div class="row search">
+    <div class="col-md-12">
+        <app-search (getName)='searchUser($event)'></app-search>
+      </div>
+  </div>
+  <div class="row main-content">
     <div class="col-md-4 image-left">
       <img src="{{users.avatar_url}}" alt="avatar_url">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 user-details">
       <div class="table table-striped">
+        <h3> {{users.name}}</h3>
         <table class="table">
-          <thead>
-            {{users.name}}
-          </thead>
           <tbody>
             <tr>
               <th scope="row">Number of Repos:</th>
               <td>{{users.public_repos}}</td>
             </tr>
             <tr>
-                <th scope="row">Hireable:</th>
+              <th scope="row">Hireable:</th>
               <td>{{users.hireable}}</td>
             </tr>
             <tr>
-                <th scope="row">Profile Create Date:</th>
+              <th scope="row">Profile Create Date:</th>
               <td>{{users.created_at}}</td>
             </tr>
             <tr>
-                <th scope="row">Followers:</th>
+              <th scope="row">Followers:</th>
               <td>{{users.followers}}</td>
             </tr>
             <tr>
-                <th scope="row">Following</th>
+              <th scope="row">Following</th>
               <td>{{users.following}}</td>
             </tr>
           </tbody>
@@ -35,4 +38,5 @@
       </div>
     </div>
   </div>
+  <hr>
 </div>

@@ -12,7 +12,7 @@ export class GitRequestService {
     this.users = new Users ("","",0,false,new Date(),0,0);
   }
 
-  gitUser(){
+  gitUser(searchName){
     interface ApiResponse{
       name:string;
       avatar_url:string;
@@ -23,7 +23,7 @@ export class GitRequestService {
       following:number;      
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>("https://api.github.com/users/devwaweru?access_token=2e74c4eee677727babc2c9cc3360499d0b7ec391").toPromise().then(getResponse=>{
+      this.http.get<ApiResponse>("https://api.github.com/users/"+searchName+"?access_token=2e74c4eee677727babc2c9cc3360499d0b7ec391").toPromise().then(getResponse=>{
         console.log(getResponse);
         this.users.name = getResponse.name;
         this.users.avatar_url = getResponse.avatar_url;
@@ -35,6 +35,13 @@ export class GitRequestService {
         resolve();
       },error=>{
         console.log("Loading has Failed. Try Again later");
+        this.users.name = "John Doe"
+        this.users.avatar_url = "https://i.pinimg.com/originals/86/7c/da/867cdaadd29b78e746d8ed1cfd0b044f.jpg";
+        this.users.public_repos = 0;
+        this.users.hireable = false;
+        this.users.created_at = new Date(Date.now());
+        this.users.followers = 0;
+        this.users.following = 0;
         reject(error);
       })
     })
