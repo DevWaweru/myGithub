@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpModule } from '@ngx-progressbar/http';
 
 
 import { AppComponent } from './app.component';
@@ -25,7 +27,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     RoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

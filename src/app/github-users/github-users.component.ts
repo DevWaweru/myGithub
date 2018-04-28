@@ -26,6 +26,7 @@ export class GithubUsersComponent implements OnInit {
       } 
     }
     this.nameToSearch=this.newName;
+    console.log(this.newName);
     this.ngOnInit();
   }
 
@@ -33,9 +34,10 @@ export class GithubUsersComponent implements OnInit {
 
   ngOnInit() {
     this.gitUserRequests.gitUser(this.nameToSearch);
-    console.log(this.gitUserRequests.users);
+    // console.log(this.gitUserRequests.users);
     this.users=this.gitUserRequests.users;
-    console.log(this.users);
+    // this.users.created_at = new Date(this.users.created_at);
+    // console.log(this.users);
   }
 
 }
