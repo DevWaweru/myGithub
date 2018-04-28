@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GitRequestService } from '../git-http/git-request.service';
+import { Users } from '../git-class/users';
 
 @Component({
   selector: 'app-github-users',
@@ -9,10 +10,15 @@ import { GitRequestService } from '../git-http/git-request.service';
 })
 export class GithubUsersComponent implements OnInit {
 
+  users:Users;
+
   constructor(private gitUserRequests:GitRequestService) { }
 
   ngOnInit() {
     this.gitUserRequests.gitUser();
+    console.log(this.gitUserRequests.users);
+    this.users=this.gitUserRequests.users;
+    console.log(this.users);
   }
 
 }

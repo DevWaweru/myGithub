@@ -1,17 +1,17 @@
 export class Users {
-    public userName:string;
-    public profPic:string;
-    public repoCount:number;
+    public name:string;
+    public avatar_url:string;
+    public public_repos:number;
     public hireable:boolean;
-    public accountCreateDate:Date;
+    public created_at:Date;
     public followers:number;
     public following:number;
-    constructor(userName,profPic,repoCount,hireable,accountCreateDate,followers,following){
-        this.userName=userName;
-        this.profPic = profPic;
-        this.repoCount = repoCount;
+    constructor(name,avatar_url,public_repos,hireable,created_at,followers,following){
+        this.name=name;
+        this.avatar_url = avatar_url;
+        this.public_repos = public_repos;
         this.hireable = hireable;
-        this.accountCreateDate = accountCreateDate;
+        this.created_at = created_at;
         this.followers = followers;
         this.following = following;
     }

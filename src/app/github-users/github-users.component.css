@@ -1,4 +1,14 @@
 .container{
     margin-top: 10rem;
-    color: white;
+}
+img{
+    max-width: 70%;
+    border-radius: 610px;
+    float: center;
+}
+.content{
+    text-indent: 5%;
+}
+p{
+    text-indent: 2rem;
 }
