@@ -18,3 +18,16 @@ button {
 .submit-button{
     text-align: center;
 }
+
+.search-bar p{
+    color: rgba(51, 51, 51, 0.61);
+    font-size: 13px;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(201, 157, 13);
+}

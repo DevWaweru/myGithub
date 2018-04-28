@@ -1,8 +1,10 @@
 <div class="container page-top">
   <ng-progress></ng-progress>
   <div class="row search">
-    <div class="col-md-12">
+    <div class="col-md-12 search-bar">
       <app-search (getName)='searchUser($event)'></app-search>
+      <p>Enter username above to search for github profile e.g. devwaweru</p>
+      <hr>
     </div>
   </div>
   <div class="row main-content">

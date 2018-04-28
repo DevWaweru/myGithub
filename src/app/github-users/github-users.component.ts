@@ -19,7 +19,7 @@ export class GithubUsersComponent implements OnInit {
     this.newName='';
     for(var i=0;i<name.length;i++){
       if(name.charAt(i)===" "||name.charAt(i)==="?"||name.charAt(i)==="/"){
-      alert(`Invalid name: enter name again`);
+      alert(`Invalid username. Username should not have spaces`);
       this.newName = 'devwaweru';
       break;
       }else if(name.charAt(i)!==" "||name.charAt(i)!=="?"||name.charAt(i)!=="/"){

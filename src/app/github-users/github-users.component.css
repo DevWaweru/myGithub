@@ -20,7 +20,7 @@ img {
   text-indent: 5%;
 }
 
-p {
+.info-repos p {
   text-indent: 2rem;
 }
 
@@ -55,4 +55,17 @@ a:hover{
 }
 td a{
     font-size: 25px;
+}
+.search-bar p{
+    color: rgba(51, 51, 51, 0.61);
+    font-size: 13px;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 992px){
+    .navbar-expand-lg {
+        height: 80px;
+    }
 }

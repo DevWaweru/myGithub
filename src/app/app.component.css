@@ -20,8 +20,13 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+a.nav-link{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav {
     margin-left: 20%;
+    height: 3rem;
   }
 }
