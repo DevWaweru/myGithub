@@ -10,27 +10,38 @@ import { Repos } from '../git-class/repos';
 })
 export class GitReposComponent implements OnInit {
   repos:Repos;
-  public newName:string = ""
+  public newName:string = "anitas+Kitchen"
   public nameToSearch:string;
+  public resultCount = 10;
 
   searchRepos(name){
+    this.newName = "";
     for(var i=0;i<name.length;i++){
       if(name.charAt(i)===" "){
         this.newName = this.newName.concat("+");
       } else if(name.charAt(i)!==" "){
         this.newName = this.newName.concat(name.charAt(i))
       }
-    }
-    
+    }    
     console.log(this.newName);
     // this.ngOnInit();
+    this.getDataFunction()
   }
 
+  loadMore(){
+    this.resultCount+=10;
+    // this.ngOnInit();
+    this.getDataFunction();
+  }
   constructor(private gitRepoRequest:GitRequestService) { }
 
   ngOnInit() {
-    // this.gitRepoRequest.gitRepos(this.nameToSearch);
-    // console.log(this.gitRepoRequest);
+    this.gitRepoRequest.gitRepos(this.newName,this.resultCount);
+    console.log(this.gitRepoRequest);
+  }
+  getDataFunction(){
+    this.gitRepoRequest.gitRepos(this.newName,this.resultCount);
+    console.log(this.gitRepoRequest);    
   }
 
 }
