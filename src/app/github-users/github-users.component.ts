@@ -32,7 +32,7 @@ export class GithubUsersComponent implements OnInit {
     this.ngOnInit();
   }
 
-  constructor(private gitUserRequests:GitRequestService,private gitUserRepos:GitRequestService) { }
+  constructor(public gitUserRequests:GitRequestService,public gitUserRepos:GitRequestService) { }
 
   ngOnInit() {
     this.gitUserRequests.gitUser(this.nameToSearch);
