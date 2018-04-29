@@ -12,10 +12,11 @@ export class SearchComponent implements OnInit {
   @Output() getName = new EventEmitter<Search>();
   
   lookFor(data){
-    console.log(data.value.find);
+    // console.log(data.value.find);
     this.getName.emit(data.value.find);
     data.reset();
   }
+
   constructor() { }
 
   ngOnInit() {

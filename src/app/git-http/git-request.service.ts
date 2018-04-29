@@ -91,7 +91,7 @@ export class GitRequestService {
     let promise = new Promise((resolve,reject)=>{
       this.http.get<ApiResponse>("https://api.github.com/search/repositories?q="+searchName+"&per_page="+toShow+"&sort=forks&order=asc?access_token="+environment.accessToken).toPromise().then(getRepoResponse=>{
         this.searchRepo = getRepoResponse.items;
-        console.log(getRepoResponse.items)
+        // console.log(getRepoResponse.items)
         resolve();
       },error=>{
         this.searchRepo = "Type above to make a search request"
