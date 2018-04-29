@@ -22,7 +22,8 @@ export class GitReposComponent implements OnInit {
       } else if(name.charAt(i)!==" "){
         this.newName = this.newName.concat(name.charAt(i))
       }
-    }    
+    }
+    if(this.resultCount===1)this.resultCount=10;    
     console.log(this.newName);
     // this.ngOnInit();
     this.getDataFunction()

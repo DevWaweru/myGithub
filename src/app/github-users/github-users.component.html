@@ -13,7 +13,7 @@
     </div>
     <div class="col-md-8 user-details">
       <div class="table table-striped">
-        <h3> {{users.name}}</h3>
+        <h3 > {{users.name}}</h3>
         <table class="table info-bio">
           <tbody>
             <tr>
@@ -50,13 +50,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 user-repos">
-      <h3>Repositories from {{users.name|lastName}} </h3>
+      <h3>Repositories by {{users.name|lastName}} </h3>
       <div class="table table-striped">
         <table class="table info-repos">
           <tbody>
             <tr *ngFor='let repository of gitUserRepos.newRepo'>
               <td>
-                <a href="{{repository.html_url}}" target="_blank">{{repository.name}}</a>
+                <a href="{{repository.html_url}}" target="_blank" appFontChanger>{{repository.name}}</a>
                 <br>
                 <p>Description: {{repository.description}}</p>
                 <br>

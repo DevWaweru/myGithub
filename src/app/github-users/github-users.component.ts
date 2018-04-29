@@ -40,12 +40,6 @@ export class GithubUsersComponent implements OnInit {
     this.users=this.gitUserRequests.users;
     this.gitUserRepos.getUserRepos(this.nameToSearch);
     console.log(this.gitUserRepos);
-    // this.repo.push(this.gitUserRepos.repos);
-    
-    // console.log(this.gitUserRepos)
-    // console.log(this.repo);
-    // this.users.created_at = new Date(this.users.created_at);
-    // console.log(this.users);
   }
 
 }
