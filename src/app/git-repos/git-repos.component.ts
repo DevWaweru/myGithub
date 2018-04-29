@@ -24,7 +24,7 @@ export class GitReposComponent implements OnInit {
       }
     }
     if(this.resultCount===1)this.resultCount=10;    
-    console.log(this.newName);
+    // console.log(this.newName);
     // this.ngOnInit();
     this.getDataFunction()
   }
@@ -39,11 +39,11 @@ export class GitReposComponent implements OnInit {
   ngOnInit() {
     this.resultCount = 1;
     this.gitRepoRequest.gitRepos(this.newName,this.resultCount);
-    console.log(this.gitRepoRequest);
+    // console.log(this.gitRepoRequest);
   }
   getDataFunction(){
     this.gitRepoRequest.gitRepos(this.newName,this.resultCount);
-    console.log(this.gitRepoRequest);    
+    // console.log(this.gitRepoRequest);    
   }
 
 }

@@ -1,27 +1,52 @@
-# MyGithub
+# Github Replica
+#### A Website that uses the GitHub API to perform searches on GitHub and display the results to the user , April 29th, 2018
+#### By **[Richard Waweru](https://github.com/devwaweru)**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+## Description
+The Github Replica is a website that uses the Github API to perform searches on Github, and display the results to the users.
 
-## Development server
+The `Find Users` page makes requests based strictly on the user names.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The `Find Repos` on the other hand, makes requests based on repository names.
 
-## Code scaffolding
+The website is made using angular js framework, and uses components, custom directives, custom pipes, routing modules and classes to make the finished product.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The components in the application are:
 
-## Build
+    1. Github users - Responsible for displaying data on users
+    2. Github repos - Responsible for displaying Repository search results.
+    3. Search - Responsible for feeding data to the components listed above
+    4. 404
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Other components include:
 
-## Running unit tests
+    1. Routing Module
+    2. Git request service
+    3. Last name pipe
+    4. Font changer directive
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Specifications
+| Behavior                  | Input                     | Output                    | 
+| ------------------------- | ------------------------- | ------------------------- |
+| Show github profile | Enter the Username in the search box without spaces and hit search | Displays name, username, number of repositories, Hireable, date of creating the repo, followers, following and lists the repos  |
+| Searcg for repos      | Click on `Find Repos` and type the name of repository. Spaces are allowed in this case | Displays a list of 10 repositories based on the query. |
+| Load more search Results | Click `Load More` button on the Find Repos page | Adds 10 more results in the search results  |
+| Redirect to a specific github profile on Github website | Click the username of a Github user to redirect | Opens the profile on the Github website |
+| Redirect to a specific Github Repository | Click the repository name to redirect | Opens the Repository on Github website |
 
-## Running end-to-end tests
+## Preview
+**[Click here](https://devwaweru.github.io/Quotes)** to see the live site.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Known Bugs
+No bugs so far. If found, email me at developer.waweru@gmail.com
 
-## Further help
+## Technologies Used
+    1. HTML
+    2. Bootstrap
+    3. Angular JS
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Support and contact details
+Contact me on developer.waweru@gmail.com for any comments, reviews or advice.
+
+### License
+Copyright (c) **Richard Waweru**

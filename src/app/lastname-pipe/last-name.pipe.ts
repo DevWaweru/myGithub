@@ -15,7 +15,7 @@ export class LastNamePipe implements PipeTransform {
         getWord = getWord + value.charAt(i);
       }
     }
-    console.log(getWord);
+    // console.log(getWord);
     return getWord;
   }
 

@@ -24,11 +24,11 @@ export class GithubUsersComponent implements OnInit {
       break;
       }else if(name.charAt(i)!==" "||name.charAt(i)!=="?"||name.charAt(i)!=="/"){
         this.newName = this.newName.concat(name.charAt(i));
-        console.log(name.charAt(i));
+        // console.log(name.charAt(i));
       } 
     }
     this.nameToSearch=this.newName;
-    console.log(this.newName);
+    // console.log(this.newName);
     this.ngOnInit();
   }
 
@@ -39,7 +39,7 @@ export class GithubUsersComponent implements OnInit {
     // console.log(this.gitUserRequests)
     this.users=this.gitUserRequests.users;
     this.gitUserRepos.getUserRepos(this.nameToSearch);
-    console.log(this.gitUserRepos);
+    // console.log(this.gitUserRepos);
   }
 
 }
