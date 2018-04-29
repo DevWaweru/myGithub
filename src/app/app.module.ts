@@ -13,6 +13,7 @@ import { SearchComponent } from './search/search.component';
 //Routing module
 import { RoutingModule } from './routing/routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LastNamePipe } from './lastname-pipe/last-name.pipe';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     GithubUsersComponent,
     GitReposComponent,
     SearchComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LastNamePipe
   ],
   imports: [
     BrowserModule,
