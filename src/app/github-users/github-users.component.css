@@ -7,13 +7,18 @@
 }
 
 img {
-  max-width: 70%;
+  max-width: 80%;
   border-radius: 610px;
 }
 
 .image-left {
-  padding-top: 4rem;
+  padding-top: 6rem;
   text-align: center;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(201, 157, 13);
 }
 
 .content {
@@ -47,25 +52,32 @@ tr {
 .info-repos {
   text-align: left;
 }
-.user-repos h3{
-    font-family: 'Julius Sans One'
+
+.user-repos h3 {
+  font-family: 'Julius Sans One'
 }
-a:hover{
-    text-decoration: none;
+
+a:hover {
+  text-decoration: none;
 }
-td a{
-    font-size: 25px;
+
+td a {
+  font-size: 25px;
 }
-.search-bar p{
-    color: rgba(51, 51, 51, 0.61);
-    font-size: 13px;
-    margin:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.search-bar p {
+  color: rgba(51, 51, 51, 0.61);
+  font-size: 13px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@media (min-width: 992px){
-    .navbar-expand-lg {
-        height: 80px;
-    }
+.search-bar{
+  position: sticky;
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    height: 80px;
+  }
 }
