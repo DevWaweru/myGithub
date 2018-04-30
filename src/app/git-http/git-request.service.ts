@@ -69,7 +69,7 @@ export class GitRequestService {
     let myPromise = new Promise((resolve,reject)=>{
       this.http.get<ApiResponse>("https://api.github.com/users/"+searchName+"/repos?order=created&sort=asc?access_token="+environment.accessToken).toPromise().then(getRepoResponse=>{
         this.newRepo = getRepoResponse;
-        // console.log(this.newRepo)
+        // console.log(getRepoResponse)
         resolve();
       },error=>{
         console.log("Loading has Failed. Try Again later");
